@@ -1,0 +1,44 @@
+/**
+ * Codeat theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Codeat
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+@import "../../reveal.scss";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Spinnaker:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Spinnaker', sans-serif;
+$mainColor: #333;
+$headingFont: 'Spinnaker', sans-serif;
+$headingColor: #333;
+$headingLetterSpacing: -0.08em;
+$headingTextShadow: none;
+$backgroundColor: #fff;
+$linkColor: #4E3A4C;
+$linkColorHover: #321D2F;
+$selectionBackgroundColor: #4E3A4C;
+
+// Fix links so they are not cut off
+.reveal a {
+	line-height: 1.3em;
+}
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( rgba(77, 77, 77, 0.5), #f7fbfc );
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
