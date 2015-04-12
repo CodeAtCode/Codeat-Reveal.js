@@ -9,7 +9,7 @@
 
 		<link rel="stylesheet" href="css/theme/codeat.css" id="theme">
 		<link rel="Shortcut Icon" href="http://codeat.it/wp-content/themes/agency-pro/images/favicon.ico" type="image/x-icon" />
-		
+
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/github.css">
 
@@ -28,7 +28,7 @@
 	</head>
 
 	<body>
-
+		<div class="barra"><div class="titolo"></div><div class="logo"></div></div>
 		<div class="reveal">
 
 			<div class="slides">
@@ -62,9 +62,9 @@
 
 						```
 						<section data-markdown>
-						  ## Markdown support
+						## Markdown support
 
-						  Write content using inline or external Markdown.
+						Write content using inline or external Markdown.
 						</section>
 						```
 					</script>
@@ -233,9 +233,9 @@ function linkify( selector ) {
 				</section>
 
 			</div>
-
 		</div>
 
+		<div class="barra bottom"><div class="titolo">Daniele Scasciafratte - Nome Evento </div><div class="hashtag">#evento</div></div>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
@@ -267,6 +267,8 @@ function linkify( selector ) {
                   }},
               ]
             });
+
+            document.querySelector('.titolo').textContent = document.title;
 
 		</script>
 

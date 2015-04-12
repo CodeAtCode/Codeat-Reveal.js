@@ -4,6 +4,9 @@
  *
  * Copyright (C) 2011-2012 Codeat
  */
+.reveal a {
+  line-height: 1.3em; }
+
 /*!
  * reveal.js
  * http://lab.hakim.se/reveal-js
@@ -40,12 +43,12 @@ body {
   color: #000; }
 
 ::-moz-selection {
-  background: #FF5E99;
+  background: #4E3A4C;
   color: #fff;
   text-shadow: none; }
 
 ::selection {
-  background: #FF5E99;
+  background: #4E3A4C;
   color: #fff;
   text-shadow: none; }
 
@@ -992,9 +995,6 @@ body {
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
 
-.reveal a {
-  line-height: 1.3em; }
-
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -1253,3 +1253,31 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #4E3A4C; }
+
+.barra {
+  background: rgba(255, 255, 255, 0.3);
+  height: 40px; }
+  .barra .titolo, .barra .hashtag {
+    font-style: italic;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+    font-family: 'Spinnaker', sans-serif;
+    font-weight: bold;
+    font-size: 14px; }
+  .barra .logo {
+    background: url(../logo.png);
+    background-repeat: no-repeat;
+    width: 201px;
+    height: 35px;
+    float: right;
+    padding-right: 5px;
+    margin-top: 3px; }
+  .barra.bottom {
+    width: 100%; }
+  .barra .hashtag {
+    float: right; }
+
+.bottom {
+  position: absolute;
+  bottom: 0px; }

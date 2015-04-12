@@ -58,13 +58,13 @@ body {
 }
 
 ::-moz-selection {
-	background: #FF5E99;
+	background: $linkColor;
 	color: #fff;
 	text-shadow: none;
 }
 
 ::selection {
-	background: #FF5E99;
+	background: $linkColor;
 	color: #fff;
 	text-shadow: none;
 }
