@@ -58,13 +58,13 @@ body {
 }
 
 ::-moz-selection {
-	background: $linkColor;
+	background: #4E3A4C;
 	color: #fff;
 	text-shadow: none;
 }
 
 ::selection {
-	background: $linkColor;
+	background: #4E3A4C;
 	color: #fff;
 	text-shadow: none;
 }
@@ -381,8 +381,7 @@ body {
 	display: none;
 	position: absolute;
 	width: 100%;
-	padding: 20px 0px;
-
+	margin-top: -20px;
 	z-index: 10;
 	transform-style: preserve-3d;
 	transition: transform-origin 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985),
