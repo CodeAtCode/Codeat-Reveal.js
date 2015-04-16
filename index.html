@@ -7,7 +7,7 @@
 		<title>reveal.js - The HTML Presentation Framework</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/theme/codeat.css" id="theme">
+		<link rel="stylesheet" href="css/codeat.min.css" id="theme">
 		<link rel="Shortcut Icon" href="http://codeat.it/wp-content/themes/agency-pro/images/favicon.ico" type="image/x-icon" />
 
 		<!-- Code syntax highlighting -->
@@ -29,6 +29,7 @@
 
 	<body>
 		<div class="barra"><div class="titolo"></div><div class="logo"></div></div>
+		<div class="barra bottom"><div class="titolo">Daniele Scasciafratte - Nome Evento </div><div class="hashtag">#evento</div></div>
 		<div class="reveal">
 
 			<div class="slides">
@@ -41,20 +42,24 @@
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
+					<div class="background">
+						<h2>Hello There</h2>
+						<p>
+							reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+						</p>
+					</div>
 				</section>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
+				<section class="force-bottom">
+					<div class="background">
+						<h2 class="white-black-shadow">Touch Optimized</h2>
+						<p>
+							Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+						</p>
+					</div>
 				</section>
 
-				<section data-markdown>
+				<section data-markdown class="force-top">
 					<script type="text/template">
 						## Markdown support
 
@@ -235,7 +240,6 @@ function linkify( selector ) {
 			</div>
 		</div>
 
-		<div class="barra bottom"><div class="titolo">Daniele Scasciafratte - Nome Evento </div><div class="hashtag">#evento</div></div>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
