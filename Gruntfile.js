@@ -14,19 +14,23 @@ module.exports = function(grunt) {
 				' * Copyright (C) 2015 Hakim El Hattab, http://hakim.se\n' +
 				' */'
 		},
-
-		sass: {
-			themes: {
-				files: {
-					'css/theme/codeat.css': 'css/theme/source/codeat.scss',
-				}
+                
+                uglify: {
+			options: {
+				banner: '<%= meta.banner %>\n'
+			},
+			build: {
+				src: 'js/reveal.js',
+				dest: 'js/reveal.min.js'
 			}
 		},
 
-		cssmin: {
-			compress: {
-				files: {
-					'css/codeat.min.css': [ 'css/theme/codeat.css' ]
+		compass: {
+			dist: {
+				options: {
+					sassDir: 'css/theme/source/',
+                                        cssDir: 'css/',
+                                        environment: 'production'
 				}
 			}
 		},
@@ -56,17 +60,6 @@ module.exports = function(grunt) {
 			files: [ 'Gruntfile.js', 'js/reveal.js' ]
 		},
 
-		zip: {
-			'reveal-js-presentation.zip': [
-				'index.html',
-				'css/**',
-				'js/**',
-				'lib/**',
-				'images/**',
-				'plugin/**'
-			]
-		},
-
 		watch: {
             options: {
                 livereload: true
@@ -77,7 +70,7 @@ module.exports = function(grunt) {
 			},
 			theme: {
 				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
-				tasks: 'css-themes'
+				tasks: 'css'
 			},
             html: {
                 files: [ 'index.html']
@@ -88,22 +81,18 @@ module.exports = function(grunt) {
 
 	// Dependencies
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-sass' );
-	grunt.loadNpmTasks( 'grunt-zip' );
+	grunt.loadNpmTasks( 'grunt-contrib-compass' );
+	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
 
 	// JS task
-	grunt.registerTask( 'js', [ 'jshint' ] );
-
-	// Theme CSS
-	grunt.registerTask( 'css-themes', [ 'sass:themes', 'cssmin' ] );
+	grunt.registerTask( 'js', [ 'jshint', 'uglify' ] );
 
 	// All CSS
-	grunt.registerTask( 'css', [ 'sass', 'autoprefixer', 'cssmin' ] );
+	grunt.registerTask( 'css', [ 'compass' ] );
 
 	// Serve presentation locally
 	grunt.registerTask( 'serve', [  'watch' ] );
