@@ -11,6 +11,7 @@
 		<link rel="Shortcut Icon" href="http://codeat.it/wp-content/themes/agency-pro/images/favicon.ico" type="image/x-icon" />
 
 		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/freezeframe_styles.min.css">
 		<link rel="stylesheet" href="lib/css/github.css">
 
 		<!-- Printing and PDF exports -->
@@ -48,6 +49,16 @@
 							reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
 						</p>
 					</div>
+				</section>
+				
+				<section>
+					<h3>Start the gif</h3>
+					<img src="pictures/attention.gif" class="freeze full">
+				</section>
+				
+				<section>
+					<h3>Stop the gif</h3>
+					<img src="pictures/attention.gif" class="stop full">
 				</section>
 
 				<section class="force-bottom">
@@ -111,12 +122,6 @@
 				<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
 					<h2>Tiled Backgrounds</h2>
 					<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-				</section>
-				<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-						<h2>Video Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-					</div>
 				</section>
 
 				<section data-transition="slide" data-background="#4d7e65" data-background-transition="convex">
@@ -236,6 +241,8 @@ function linkify( selector ) {
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
+		<script src="lib/js/freezeframe.pkgd.min.js"></script>
+		<script src="js/gif.js"></script>
 
 		<script>
 
@@ -247,7 +254,14 @@ function linkify( selector ) {
               touch: true,
               overview: false,
               transition: 'zoom', // none/fade/slide/convex/concave/zoom
-
+			  keyboard: {
+				78: function () {animateGif() },
+				34: function () {animateGif() },
+				76: function () {animateGif() },
+				39: function () {animateGif() },
+				74: function () {animateGif() },
+				40: function () {animateGif() }
+			  },
               dependencies: [
                 {src: 'lib/js/classList.js', condition: function () {
                     return !document.body.classList;

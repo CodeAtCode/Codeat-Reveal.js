@@ -125,6 +125,10 @@ i {
     background-size: contain;
 }
 
+img.full {
+    width:880px;
+}
+
 @media screen and (min-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) , screen and (device-aspect-ratio: 16/11) {
     .barra {
         .titolo, .hashtag {
