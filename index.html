@@ -7,7 +7,9 @@
 		<title>reveal.js - The HTML Presentation Framework</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/codeat.css" id="theme">
+        <link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/codeat.css" id="theme">
 		<link rel="Shortcut Icon" href="https://i2.wp.com/codeat.co/wp-content/uploads/2016/02/cropped-small-logo.png?fit=32%2C32&#038;ssl=1" type="image/x-icon" />
 
 		<!-- Code syntax highlighting -->
@@ -120,7 +122,7 @@
 					<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
 				</section>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="convex">
+				<section data-background="#4d7e65" data-background-transition="convex">
 					<h2>Background Transitions</h2>
 					<p>
 						Different background transitions are available via the backgroundTransition option. This one's called "convex".
@@ -128,7 +130,7 @@
 					<pre><code>Reveal.configure({ backgroundTransition: 'convex' })</code></pre>
 				</section>
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+				<section data-background="#b5533c" data-background-transition="zoom">
 					<h2>Background Transitions</h2>
 					<p>
 						You can override background transitions per-slide.
